@@ -1,0 +1,13 @@
+package com.bilandzija.restcloudservices.userservicedemo
+
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
+
+@SpringBootTest
+class UserServiceDemoApplicationTests {
+
+	@Test
+	fun contextLoads() {
+	}
+
+}

@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "f8f354f3-10b7-4585-b8f1-207f97e4bafd",
+		"name": "User Service Demo",
+		"description": "Sample Postman Collection to access demo user endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get users",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8882/user-api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"user-api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by mail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8882/user-api/user?email=mike@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"user-api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mike@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"Babbels@info.com\",\n    \"firstName\": \"Quincy\",\n    \"lastName\": \"Babbels\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8882/user-api/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"user-api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"Babbels@info.com\",\n    \"firstName\": \"Quincy\",\n    \"lastName\": \"Babbels\",\n    \"age\": 27,\n    \"gender\": \"female\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8882/user-api/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"user-api",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8882/user-api/delete?email=mike@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8882",
+					"path": [
+						"user-api",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mike@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mail Service - send mail",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8883/send-mail",
+					"host": [
+						"localhost"
+					],
+					"port": "8883",
+					"path": [
+						"send-mail"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "user",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "user",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
